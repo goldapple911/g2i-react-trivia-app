@@ -1,10 +1,14 @@
 import React from 'react';
 
-const Layout = (props) => {
+type LayoutProps = {
+  children: React.ReactNode,
+}
+
+const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <div>
       <div className='App-wrapper'>
-        {props.children}
+        {children}
       </div>
     </div>
   )
