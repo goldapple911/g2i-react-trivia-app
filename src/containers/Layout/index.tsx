@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './Layout.scss';
+import './style.scss';
 
-type LayoutProps = {
+interface IProps {
   children: React.ReactNode;
-};
+}
 
-function Layout({ children }: LayoutProps): JSX.Element {
+function Layout({ children }: IProps): JSX.Element {
   return (
     <div className="App-wrapper vh-100 d-flex justify-content-center align-items-center">
       <div className="App-main">{children}</div>

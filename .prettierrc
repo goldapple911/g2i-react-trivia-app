@@ -11,6 +11,7 @@
   "arrowParens": "always",
   "parser": "typescript",
   "requirePragma": false,
-  "endOfLine": "crlf",
-  "singleAttributePerLine": false
+  "endOfLine": "auto",
+  "singleAttributePerLine": false,
+  "htmlWhitespaceSensitivity": "ignore"
 }
