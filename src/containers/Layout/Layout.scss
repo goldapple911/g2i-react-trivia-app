@@ -1,0 +1,20 @@
+$--color-bg-wrapper: rgb(32, 48, 56);
+$--color-bg-main: whitesmoke;
+
+.App-wrapper {
+  background-color: $--color-bg-wrapper;
+
+  min-width: 1024px;
+  min-height: 768px;
+}
+
+.App-main {
+  height: 540px;
+  width: 420px;
+
+  font-size: 24px;
+
+  padding: 36px;
+  border-radius: 4px;
+  background-color: $--color-bg-main;
+}
