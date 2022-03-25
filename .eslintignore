@@ -1,0 +1,6 @@
+.idea
+.storybook
+.vscode
+.huskey
+node_modules
+public
