@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import toast from 'react-hot-toast';
 
-import { fetchProblems } from '../../api';
+import { fetchProblems } from '../../api/problems.service';
 import { QuizContext } from '../../contexts/QuizContext';
 import ResultsBox from './ResultsBox';
 import { evaluateQuiz } from '../../utils';

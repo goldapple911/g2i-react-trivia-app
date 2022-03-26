@@ -6,7 +6,7 @@ import { Spinner, Alert } from 'react-bootstrap';
 
 import './style.scss';
 
-import { fetchProblems } from '../../api';
+import { fetchProblems } from '../../api/problems.service';
 import { MESSAGES } from '../../utils/constants';
 
 function Home() {
