@@ -12,7 +12,7 @@ export const QuizContext = React.createContext<QuizContextValue>({
   clearAnswers: () => undefined,
 });
 
-export function QuizContextProvider({ children }: { children: React.ReactNode }) {
+export const QuizContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [value, setValue] = React.useState<QuizContextValue>({
     answers: [],
     setAnswer: () => undefined,
@@ -50,4 +50,4 @@ export function QuizContextProvider({ children }: { children: React.ReactNode })
   }, [value, setAnswer, clearAnswers]);
 
   return <QuizContext.Provider value={finalContext}>{children}</QuizContext.Provider>;
-}
+};

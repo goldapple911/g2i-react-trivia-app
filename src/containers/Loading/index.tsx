@@ -6,7 +6,7 @@ export interface IProps {
   animation: AnimationType;
 }
 
-function Loading({ animation }: IProps): JSX.Element {
+const Loading = ({ animation }: IProps): JSX.Element => {
   return (
     <div className="h-100 d-flex justify-content-center align-items-center">
       <Spinner data-testid="loading-spinner" animation={animation} role="status">
@@ -14,6 +14,6 @@ function Loading({ animation }: IProps): JSX.Element {
       </Spinner>
     </div>
   );
-}
+};
 
 export default Loading;

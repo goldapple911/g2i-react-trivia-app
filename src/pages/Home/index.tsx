@@ -9,7 +9,7 @@ import './style.scss';
 import { fetchProblems } from '../../api/problems.service';
 import { MESSAGES } from '../../utils/constants';
 
-function Home() {
+const Home = () => {
   const { isFetching, isError, data, refetch } = useQuery('problems', fetchProblems, {
     onError: () => {
       toast.error(MESSAGES.ERRORS.LOADING_QUIZZES);
@@ -59,6 +59,6 @@ function Home() {
       {renderContent()}
     </div>
   );
-}
+};
 
 export default Home;

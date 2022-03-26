@@ -9,7 +9,7 @@ export interface IProps {
   problems: Problem[] | undefined;
 }
 
-function ResultsBox({ problems }: IProps): JSX.Element {
+const ResultsBox = ({ problems }: IProps): JSX.Element => {
   const { answers } = useContext(QuizContext);
 
   return (
@@ -19,6 +19,6 @@ function ResultsBox({ problems }: IProps): JSX.Element {
       ))}
     </div>
   );
-}
+};
 
 export default ResultsBox;

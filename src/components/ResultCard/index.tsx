@@ -7,13 +7,13 @@ export interface IProps {
   question: string;
 }
 
-function ResultCard({ evaluation, question }: IProps): JSX.Element {
+const ResultCard = ({ evaluation, question }: IProps): JSX.Element => {
   return (
     <div className="Result-card d-flex">
       <div data-testid="evaluation">{evaluation ? <FaPlus /> : <FaMinus />}</div>
       <p className="ms-3" dangerouslySetInnerHTML={{ __html: question }} />
     </div>
   );
-}
+};
 
 export default ResultCard;

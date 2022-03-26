@@ -22,7 +22,7 @@ const queryClient = new QueryClient({
   },
 });
 
-function App() {
+const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <QuizContextProvider>
@@ -41,6 +41,6 @@ function App() {
       </QuizContextProvider>
     </QueryClientProvider>
   );
-}
+};
 
 export default App;

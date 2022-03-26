@@ -8,7 +8,7 @@ import { Problem as ProblemType } from '../../utils/type';
 import { MESSAGES } from '../../utils/constants';
 import { QuizContext } from '../../contexts/QuizContext';
 
-function Problem() {
+const Problem = () => {
   const quizContext = useContext(QuizContext);
   const { id } = useParams();
   const navigate = useNavigate();
@@ -54,6 +54,6 @@ function Problem() {
       </div>
     </div>
   );
-}
+};
 
 export default Problem;

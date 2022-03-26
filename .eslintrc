@@ -40,6 +40,13 @@
     "react/react-in-jsx-scope": "off",
     "react/no-unescaped-entities": "off",
     "react/no-danger": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
     "jsx-a11y/anchor-is-valid": "off",
     "prettier/prettier": [
       "error"

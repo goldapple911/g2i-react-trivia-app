@@ -9,7 +9,7 @@ import ResultsBox from './ResultsBox';
 import { evaluateQuiz } from '../../utils';
 import { MESSAGES } from '../../utils/constants';
 
-function Result() {
+const Result = (): JSX.Element => {
   const { answers, clearAnswers } = useContext(QuizContext);
 
   const { data } = useQuery('problems', fetchProblems, {
@@ -38,6 +38,6 @@ function Result() {
       </Link>
     </div>
   );
-}
+};
 
 export default Result;
