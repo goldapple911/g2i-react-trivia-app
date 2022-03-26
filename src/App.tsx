@@ -4,10 +4,11 @@ import { Toaster } from 'react-hot-toast';
 
 import 'bootstrap/scss/bootstrap.scss';
 
+import { QuizContextProvider } from './contexts/QuizContext';
 import Layout from './containers/Layout';
 import NotFound from './containers/NotFound';
 import Home from './pages/Home';
-import Quizzes from './pages/Quizzes';
+import Problem from './pages/Problem';
 import Result from './pages/Result';
 
 const queryClient = new QueryClient({
@@ -24,18 +25,20 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Layout>
-        <Router>
-          <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/quizzes" element={<Quizzes />} />
-            <Route path="/result" element={<Result />} />
-            <Route path="/" element={<Navigate replace to="/home" />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Router>
-      </Layout>
-      <Toaster />
+      <QuizContextProvider>
+        <Layout>
+          <Router>
+            <Routes>
+              <Route path="/home" element={<Home />} />
+              <Route path="/problems/:id" element={<Problem />} />
+              <Route path="/result" element={<Result />} />
+              <Route path="/" element={<Navigate replace to="/home" />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Router>
+        </Layout>
+        <Toaster />
+      </QuizContextProvider>
     </QueryClientProvider>
   );
 }

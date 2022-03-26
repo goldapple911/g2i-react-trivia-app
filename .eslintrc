@@ -5,7 +5,7 @@
       "jsx": true,
       "useJSXTextNode": true
     },
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2021,
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
@@ -39,6 +39,7 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "react/no-unescaped-entities": "off",
+    "react/no-danger": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "prettier/prettier": [
       "error"

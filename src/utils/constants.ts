@@ -1,5 +1,5 @@
 export const MESSAGES = {
   ERRORS: {
-    LOADING_QUIZZES: 'Failed to get quizzes!',
+    LOADING_QUIZZES: 'Failed to get problems!',
   },
 };

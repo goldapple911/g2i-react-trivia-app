@@ -1,1 +1,1 @@
-export const getQuizzesURL = 'http://localhost:9000/api/quizzes';
+export const getProblemsURL = 'http://localhost:9000/api/problems';
