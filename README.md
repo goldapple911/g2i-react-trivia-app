@@ -32,4 +32,4 @@ A simple quiz app with 10 questions, which are should be answered with `true` or
 - `npm run lint` to check lint errors
 - `npm run lint-fix` to fix lint errors
 - `npm test` to test the app
-- `npm build` to build a production bundle
+- `npm run build` to build a production bundle
