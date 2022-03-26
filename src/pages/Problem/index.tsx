@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useQuery } from 'react-query';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 import { fetchProblems } from '../../api/problems.service';
@@ -11,6 +11,7 @@ import { QuizContext } from '../../contexts/QuizContext';
 function Problem() {
   const quizContext = useContext(QuizContext);
   const { id } = useParams();
+  const navigate = useNavigate();
   const { data } = useQuery('problems', fetchProblems, {
     onError: () => {
       toast.error(MESSAGES.ERRORS.LOADING_QUIZZES);
@@ -25,8 +26,12 @@ function Problem() {
   let linkTo: string | undefined;
   if (data && id) {
     const idAsNumber = Number(id);
-    problem = data[idAsNumber - 1];
 
+    if (!(idAsNumber && idAsNumber > 0 && idAsNumber < 11)) {
+      navigate('/home');
+    }
+
+    problem = data[idAsNumber - 1];
     if (idAsNumber === data.length) {
       linkTo = '/result';
     } else {
