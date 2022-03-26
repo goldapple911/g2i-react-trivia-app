@@ -18,7 +18,7 @@ function Problem() {
   });
 
   const handleAnswer = async (event: React.MouseEvent<HTMLAnchorElement>, answer: boolean) => {
-    await quizContext.pushAnswer(answer);
+    await quizContext.setAnswer(Number(id) - 1, answer);
   };
 
   let problem: ProblemType | undefined;

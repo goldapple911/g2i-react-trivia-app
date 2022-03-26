@@ -2,29 +2,33 @@ import React from 'react';
 
 export type QuizContextValue = {
   answers: boolean[];
-  pushAnswer: (answer: boolean) => void;
+  setAnswer: (index: number, answer: boolean) => void;
   clearAnswers: () => void;
 };
 
 export const QuizContext = React.createContext<QuizContextValue>({
   answers: [],
-  pushAnswer: () => undefined,
+  setAnswer: () => undefined,
   clearAnswers: () => undefined,
 });
 
 export function QuizContextProvider({ children }: { children: React.ReactNode }) {
   const [value, setValue] = React.useState<QuizContextValue>({
     answers: [],
-    pushAnswer: () => undefined,
+    setAnswer: () => undefined,
     clearAnswers: () => undefined,
   });
 
-  const pushAnswer = React.useCallback(
-    (answer: boolean) =>
+  const setAnswer = React.useCallback(
+    (index: number, answer: boolean) => {
+      const { answers } = value;
+      answers[index] = answer;
+
       setValue({
         ...value,
-        answers: [...value.answers, answer],
-      }),
+        answers,
+      });
+    },
     [value],
   );
 
@@ -40,10 +44,10 @@ export function QuizContextProvider({ children }: { children: React.ReactNode })
   const finalContext = React.useMemo(() => {
     return {
       ...value,
-      pushAnswer,
+      setAnswer,
       clearAnswers,
     };
-  }, [value, pushAnswer, clearAnswers]);
+  }, [value, setAnswer, clearAnswers]);
 
   return <QuizContext.Provider value={finalContext}>{children}</QuizContext.Provider>;
 }
