@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-interface IProps {
+export interface IProps {
   children: React.ReactNode;
 }
 

@@ -2,17 +2,17 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 
 import './style.scss';
 
-interface IProps {
+export interface IProps {
   evaluation: boolean;
   question: string;
 }
 
 function ResultCard({ evaluation, question }: IProps): JSX.Element {
   return (
-    <p className="Result-card">
-      {evaluation ? <FaPlus /> : <FaMinus />}
-      <span className="ms-3" dangerouslySetInnerHTML={{ __html: question }} />
-    </p>
+    <div className="Result-card d-flex">
+      <div data-testid="evaluation">{evaluation ? <FaPlus /> : <FaMinus />}</div>
+      <p className="ms-3" dangerouslySetInnerHTML={{ __html: question }} />
+    </div>
   );
 }
 

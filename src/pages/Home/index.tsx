@@ -55,7 +55,7 @@ function Home() {
 
   return (
     <div className="h-100 d-flex flex-column justify-content-between text-center">
-      <h2>Welcome to the Trivia Challange!</h2>
+      <h2>Welcome to the Trivia Challenge!</h2>
       {renderContent()}
     </div>
   );

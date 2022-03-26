@@ -5,7 +5,7 @@ import ResultCard from '../../components/ResultCard';
 import { evaluateAnswer, getRandomHash } from '../../utils';
 import { Problem } from '../../utils/type';
 
-interface IProps {
+export interface IProps {
   problems: Problem[] | undefined;
 }
 

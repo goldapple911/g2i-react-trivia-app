@@ -33,7 +33,7 @@ function Result() {
         </p>
       </div>
       <ResultsBox problems={data} />
-      <Link to="/home" onClick={handlePlayAgain} className="text-black text-decoration-none">
+      <Link to="/home" onClick={handlePlayAgain} className="text-black text-decoration-none mt-3">
         PLAY AGAIN?
       </Link>
     </div>
